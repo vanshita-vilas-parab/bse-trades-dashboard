@@ -45,17 +45,17 @@ When the user clicks **Pull Latest Trades**:
 
 ```text
                     ┌─────────────────────┐
-                    │      React UI        │
-                    │    Vite + React      │
-                    │      Port 5173       │
+                    │      React UI       │
+                    │    Vite + React     │
+                    │      Port 5173      │
                     └──────────┬──────────┘
                                │
                   REST API     │     SSE
                                │
                                ▼
                     ┌─────────────────────┐
-                    │    Flask Backend     │
-                    │      Port 5000       │
+                    │    Flask Backend    │
+                    │      Port 5000      │
                     └───────┬─────┬───────┘
                             │     │
                   Background│     │ Read trades
@@ -663,8 +663,6 @@ The 10-second setting is only for development/demo purposes; the application is 
 
 For a production-ready implementation, the following improvements could be added:
 
-- Celery/RQ with Redis for durable background jobs
-- Job IDs and persistent job status
 - Retry handling for failed BSE requests
 - Authentication and authorization
 - Pagination for large trade datasets
